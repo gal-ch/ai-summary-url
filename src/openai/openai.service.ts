@@ -11,7 +11,7 @@ const distance = require('compute-cosine-distance')
 export class OpenaiService {
     private readonly openaiInstance: OpenAIApi;
     private queryEmbedding = null;
-    private relatedSlice = 100
+    private relatedSlice = 10
     constructor(private readonly promptService: PromptService) {
         this.openaiInstance = new OpenAIApi({apiKey: process.env.OPENAI_API_KEY});
     }
